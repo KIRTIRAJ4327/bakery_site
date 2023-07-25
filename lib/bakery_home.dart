@@ -117,7 +117,16 @@ class _BakeryHomePageState extends State<BakeryHomePage> {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        title: WordArtText(),
+        title: WordArtText(
+          text: "Atul Bakery - Jayveer Sales",
+          gradientColors: const [
+            Color.fromARGB(255, 188, 67, 249),
+            Color.fromARGB(255, 47, 110, 255),
+          ],
+          fontSize: 60,
+          fontWeight: FontWeight.w900,
+          textColor: Color.fromARGB(255, 255, 255, 255),
+        ),
         centerTitle: true,
         backgroundColor: Colors
             .transparent, // Set the app bar background color to transparent
