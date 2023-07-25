@@ -2,7 +2,15 @@ name: Gh-Pages
 
 on:
   push:
-    branches: [master]
+    branches: 
+    - main
+    - 'releases/**'
+
+  pull_request:
+    branches: 
+    - main
+    - 'releases/**'
+
 
 jobs:
   build:
