@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 import 'bakery_home.dart'; // Import the BakeryHomePage class
 import './animation/animation.dart'; // Import the AnimatedBackground class
 
-Future<void> main() async {
-  await Firebase.initializeApp();
+void main() {
   runApp(BakeryApp());
 }
 

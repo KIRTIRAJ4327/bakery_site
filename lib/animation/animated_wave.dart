@@ -30,8 +30,8 @@ import 'dart:math';
 //     });
 //   }
 // }
-import 'package:flutter/material.dart';
-import 'dart:math';
+// import 'package:flutter/material.dart';
+// import 'dart:math';
 
 class AnimatedWave extends StatefulWidget {
   final double height;
@@ -97,9 +97,9 @@ class CurvePainter extends CustomPainter {
     final y2 = sin(value + pi / 2);
     final y3 = sin(value + pi);
 
-    final startPointY = size.height * (0.5 + 0.4 * y1);
-    final controlPointY = size.height * (0.5 + 0.4 * y2);
-    final endPointY = size.height * (0.5 + 0.4 * y3);
+    final startPointY = size.height * (0.5 + 0.6 * y1);
+    final controlPointY = size.height * (0.5 + 0.6 * y2);
+    final endPointY = size.height * (0.5 + 0.6 * y3);
 
     path.moveTo(size.width * 0, startPointY);
     path.quadraticBezierTo(
