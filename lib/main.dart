@@ -1,7 +1,6 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'bakery_home.dart'; // Import the BakeryHomePage class
-import './animation/animation.dart'; // Import the AnimatedBackground class
+// Import the AnimatedBackground class
 
 void main() {
   runApp(BakeryApp());
