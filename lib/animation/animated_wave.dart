@@ -30,8 +30,8 @@ import 'dart:math';
 //     });
 //   }
 // }
-// import 'package:flutter/material.dart';
-// import 'dart:math';
+import 'package:flutter/material.dart';
+import 'dart:math';
 
 class AnimatedWave extends StatefulWidget {
   final double height;
