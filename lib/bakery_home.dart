@@ -203,7 +203,7 @@
 //     );
 //   }
 // }
-import 'package:flutter/foundation.dart';
+
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/link.dart';
@@ -222,7 +222,7 @@ class CenteredText extends StatelessWidget {
     return Center(
       child: Text(
         text,
-        style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+        style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
       ),
     );
   }
@@ -273,20 +273,23 @@ class _BakeryHomePageState extends State<BakeryHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: true,
-      appBar: AppBar(
-        title: WordArtText(
-          text: "Atul Bakery - Jayveer Sales",
-          gradientColors: const [
-            Color.fromARGB(255, 188, 67, 249),
-            Color.fromARGB(255, 47, 110, 255),
-          ],
-          fontSize: MediaQuery.of(context).size.width < 600 ? 25 : 60,
-          fontWeight: FontWeight.w900,
-          textColor: Color.fromARGB(255, 255, 255, 255),
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(kToolbarHeight + 40),
+        child: AppBar(
+          title: WordArtText(
+            text: "Atul Bakery - Jayveer Sales",
+            gradientColors: const [
+              Color.fromARGB(255, 188, 67, 249),
+              Color.fromARGB(255, 47, 110, 255),
+            ],
+            fontSize: MediaQuery.of(context).size.width < 600 ? 24 : 60,
+            fontWeight: FontWeight.w900,
+            textColor: const Color.fromARGB(255, 255, 255, 255),
+          ),
+          centerTitle: true,
+          backgroundColor: Colors.transparent,
+          elevation: 0,
         ),
-        centerTitle: true,
-        backgroundColor: Colors.transparent,
-        elevation: 0,
       ),
       body: LayoutBuilder(
         builder: (context, constraints) {
@@ -303,23 +306,23 @@ class _BakeryHomePageState extends State<BakeryHomePage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    CustomButton(
+                    const CustomButton(
                       icon: Icon(Icons.web_stories_outlined),
                       label: 'Your Prestigious Feedback',
                       url:
                           'https://www.google.com/search?q=atul+bakery+bharuch+link&rlz=1C1ONGR_enIN1045IN1045&oq=atul+bakery+bharuch&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDsyBggCEEUYOzIHCAMQABiABDIHCAQQABiABDIMCAUQABgUGIcCGIAEMgcIBhAAGIAEMgcIBxAAGIAEMggICBAAGBYYHjIICAkQABgWGB7SAQg3NTY2ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#lrd=0x395f864400000019:0x1b2a27b3c1a02320,1,,,,',
                     ),
-                    SizedBox(height: 16),
-                    CustomButton(
+                    const SizedBox(height: 16),
+                    const CustomButton(
                       icon: Icon(Icons.web_stories_outlined),
                       label: 'Follow us Here',
                       url: 'https://www.instagram.com/atulbakery_bharuch/',
                     ),
-                    SizedBox(height: 16),
+                    const SizedBox(height: 16),
                     if (isMobile)
                       ElevatedButton(
                         onPressed: () => _launchPhone(),
-                        child: Text('Contact Us'),
+                        child: const Text('Contact Us'),
                       ),
                     if (isTablet || isWeb)
                       ElevatedButton(
@@ -334,13 +337,13 @@ class _BakeryHomePageState extends State<BakeryHomePage> {
                         },
                         child: Text('Contact Us'),
                       ),
-                    SizedBox(height: 16),
-                    CustomButton(
+                    const SizedBox(height: 16),
+                    const CustomButton(
                       icon: Icon(Icons.web_stories_outlined),
                       label: 'Visit Our Website',
                       url: 'https://www.atulbakery.com/',
                     ),
-                    SizedBox(height: 16),
+                    const SizedBox(height: 16),
                     Link(
                       uri: Uri.parse(
                           'https://www.google.com/maps/dir/21.714312,73.0051052/atul+bakery+bharuch+link/@21.7136403,72.987395,15z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x395f864400000019:0x1b2a27b3c1a02320!2m2!1d72.985778!2d21.7184787?entry=ttu'),
@@ -353,7 +356,7 @@ class _BakeryHomePageState extends State<BakeryHomePage> {
                         );
                       },
                     ),
-                    SizedBox(height: 16),
+                    const SizedBox(height: 16),
                     FutureBuilder<void>(
                         future: _launched, builder: _launchStatus),
                   ],
