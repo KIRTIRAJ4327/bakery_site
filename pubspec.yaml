@@ -42,7 +42,7 @@ dependencies:
   simple_animations: 4.2.0
   firebase_auth: ^4.7.1
   firebase_core: ^2.15.0
-  cloud_firestore: ^4.8.3
+  
   flutter_sequence_animation: ^4.0.0
 
 dev_dependencies:
